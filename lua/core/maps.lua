@@ -26,3 +26,8 @@ vim.keymap.set("i", "jj", "<ESC>", { desc = "Leave insert mode" })
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", { desc = "See previous item in quick fix list" })
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz", { desc = "See next item in quick fix list" })
 vim.keymap.set("n", "<leader>x", "<cmd>Ex<CR>", { desc = "Open e[x]plorer" })
+
+vim.keymap.set("n", "gs", function()
+	vim.cmd("vsplit")
+	vim.lsp.buf.definition()
+end, { desc = "[G]oto Definition in [S]plit Pane" })
