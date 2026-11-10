@@ -4,6 +4,7 @@ return { -- Highlight, edit, and navigate code
 	opts = {
 		ensure_installed = {
 			"bash",
+			"python",
 			"c",
 			"diff",
 			"go",
